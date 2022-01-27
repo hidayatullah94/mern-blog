@@ -1,0 +1,32 @@
+.home-page {
+  width: 100%;
+  height: 100%;
+  .content-blog {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .pignation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  .page-pignation {
+    font-weight: bold;
+    color: dodgerblue;
+    font-size: 1.3em;
+  }
+}
+.data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 200px;
+    margin-bottom: 25px;
+    margin-top: 9.5rem;
+  }
+}

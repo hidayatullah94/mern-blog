@@ -1,0 +1,88 @@
+// express validator 
+digunakan untuk validasi
+npm install --save express-validator
+
+
+
+//! STANDAR API
+
+{root-api}/{version}/{grouping}/{endpoin}
+
+example:
+"http://mren-api/stangers.com/v1/auth/login
+
+// todo: STANDAR STATUS RESPON
+200 - Ok                    --> Call api succes
+201 - Crated                --> Post succes
+400 - Bad request           --> Error on client side // salah input dll
+401 - Unauthorized          --> User not authorized
+403 - Forbiden              --> User not allowwed to access
+404 - Not found             --> Request endpoint not found
+500 - Internal server error --> Error server side
+502 - Bad Gateway           --> Invalid response from antoher request 
+
+=================================================================================
+
+GROUP: Authentication
+
+[1] -> Register
+        "http://mern-api/stangers.com/v1/auth/Register
+        reg:
+        {
+            "name":"testing",
+            "email":"testing@gmail.com",
+            "password":"1234",
+        }
+        res:
+        {
+            "message":"Register Succes"
+            "data":{
+                "uid":1,
+                "name":"testing",
+                "email":"testing@gmail.com",
+                "password":"1234",
+            }
+        }
+        err-response:
+        {
+            "message":"status-message"
+        }
+[2] -> Login
+
+
+Group Blog
+
+[1] -> Create Blog / POST
+        req:
+        {
+            "title":"testing",
+            "image":"imgfile.jpg",
+            "content":"lorem xample"
+        }
+        res:
+        {
+            "message":"Create Blog Succes",
+            "data":{
+                "post_id":1,
+                "title":"testing",
+                "image":"imgfile.jpg",
+                "content":"lorem xample",
+                "create_at":"12/01/2022",
+                "author": {
+                    "uid":"1",
+                    "name":"testing",
+                }
+
+            }
+            
+        }
+        err-response:
+        {
+            "message":"error-response"
+        }
+
+
+[2] -> Read Blog 
+[3] -> Update Blog
+[4] -> Delete Blog
+
